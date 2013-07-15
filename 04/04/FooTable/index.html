@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Responsive Table DEMO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/footable-0.1.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+<style>
+body{
+	font-family: sans-serif;
+}
+h1 {
+  margin: 0;
+  padding: 30px 0;
+  font-size: 3em;
+  font-weight: normal;
+  font-family: 'Marcellus SC', serif;
+  text-align: center;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/footable-0.1.js"></script>
+<script type="text/javascript">
+    $(function() {
+      $('.footable').footable();
+    });
+  </script>
+
+</head>
+<body>
+<h1>FooTable</h1>
+<table class="footable">
+	<thead>
+		<tr>
+			<th data-class="expand">Employee</th>
+			<th data-class="expand">xHTML</th>
+			<th>HTML5</th>
+			<th>CSS</th>
+			<th data-hide="phone,tablet">JS</th>
+			<th data-hide="phone,tablet">jQuery</th>
+			<th data-hide="phone">PHP</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Marco Pegoraro</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+		</tr><tr>
+			<td>Mario Rossi</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>no</td>
+			<td>no</td>
+			<td>yes</td>
+			<td>no</td>
+		</tr><tr>
+			<td>Alberto Bianchi</td>
+			<td>no</td>
+			<td>no</td>
+			<td>yes</td>
+			<td>no</td>
+			<td>no</td>
+			<td>no</td>
+		</tr><tr>
+			<td>Brad Poul</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>no</td>
+			<td>yes</td>
+			<td>no</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

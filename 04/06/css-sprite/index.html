@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>CSS Splite DEMO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+<style>
+body{
+	font-family: sans-serif;
+	text-align: center;
+}
+h1 {
+	margin: 0;
+	padding: 30px 0;
+	font-size: 3em;
+	font-weight: normal;
+	font-family: 'Marcellus SC', serif;
+	text-align: center;
+}
+li{
+	margin: 10px;
+	list-style-type: none;
+	line-height: 50px;
+	font-size: 50px;
+}
+li:before{
+	display: inline-block;
+	content: "";
+	height: 50px;
+	width: 50px;
+	margin-right: 5px;
+	vertical-align: bottom;
+	background: url(img/icon.png) no-repeat;
+}
+li:nth-child(2):before{	background-position: -50px 0;		}
+li:nth-child(3):before{	background-position: 0 -50px;		}
+li:nth-child(4):before{	background-position: -50px -50px;	}
+</style>
+</head>
+<body>
+<h1>CSS Splite</h1>
+<ul>
+	<li>Menu01</li>
+	<li>Menu02</li>
+	<li>Menu03</li>
+	<li>Menu04</li>
+</ul>
+</body>
+</html>

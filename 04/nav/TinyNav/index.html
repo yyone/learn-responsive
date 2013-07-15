@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TinyNav.js Demo</title>
+<link rel="stylesheet" href="css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+    <h1>TinyNav.js</h1>
+</header>
+<nav>
+	<ul id="nav">
+	<li><a href="#">Home</a></li>
+	<li class="selected"><a href="#">Books</a></li>
+	<li><a href="#">Blog</a></li>
+	<li><a href="#">About Us</a></li>
+	<li><a href="#">Support</a></li>
+	</ul>
+
+	<ul id="nav2">
+		<li><a href="#">Home</a></li>
+		<li class="selected"><a href="#">Books</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">About Us</a>
+			<ul>
+				<li><a href="#">History</a></li>
+				<li><a href="#">Member</a></li>
+				<li><a href="#">Company</a></li>
+				<li><a href="#">Recruit</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Support</a></li>
+	</ul>
+</nav>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/tinynav.min.js"></script>
+<script>
+$(function () {
+	// nav1
+	$('#nav').tinyNav({
+		active: 'selected',
+		label: 'Menu'
+	});
+	// nav2
+		$('#nav2').tinyNav({
+		header: '選択してください'
+	});
+});
+</script>
+</body>
+</html>

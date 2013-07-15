@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/*---------------------------------
+Travel Spice index styleSheet
+----------------------------------*/
+/*オススメのツアー*/
+#recommendTour section{
+  margin-bottom: 2em;
+}
+#recommendTour section h3{
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+#recommendTour p{
+  margin-bottom: 0.3em;
+}
+#recommendTour .pic{
+  text-align: center;
+}
+#recommendTour .more{
+  text-align: right;
+}
+/*topics*/
+#topics article h3{
+  margin-bottom: 0.5em;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  background: #e5e5e5;
+  background: -webkit-linear-gradient(top, #ffffff, #e5e5e5);
+  background: -moz-linear-gradient(top, #ffffff, #e5e5e5);
+  background: -o-linear-gradient(top, #ffffff, #e5e5e5);
+  background: linear-gradient(to bottom, #ffffff, #e5e5e5);
+  line-height: 1.2;
+}
+#topics article:target h3{
+  background: #18445c;
+  background: -webkit-linear-gradient(top, #18445c, #113041);
+  background: -moz-linear-gradient(top, #18445c, #113041);
+  background: -o-linear-gradient(top, #18445c, #113041);
+  background: linear-gradient(to bottom, #18445c, #113041);
+}
+#topics article h3 a{
+  display: block;
+  padding: 7px 0 7px 25px;
+  background: url(../img/icon_common.png) -53px 10px no-repeat;
+  color: #333;
+  text-decoration: none;
+}
+#topics article:target h3 a{
+  background-position: -52px -82px;
+  color: #fff;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 1.5dppx) {
+  #topics article h3 a{
+    background-image: url(../img/icon_common@2x.png);
+    -webkit-background-size: 88px 220px;
+    background-size: 88px 220px;
+  }
+}
+#topics article .inner{
+  display: none;
+}
+#topics article:target .inner{
+  display: block;
+}
+#topics article{
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px dotted #012340;
+}
+#topics article:last-child{
+  border-bottom: none;
+}
+
+/*media Queries
+----------------------------------------------------*/
+@media only screen and (min-width: 31.25em) {  /*500px*/
+  /*オススメツアー*/
+  #recommendTour .pic {
+    overflow: hidden;
+    float: left;
+    width: 220px;
+  }
+  #recommendTour .pic img {
+    max-width: none;
+    margin-left: -40px;
+  }
+  #recommendTour p {
+    margin-left: 230px;
+  }
+  #recommendTour .more {
+    clear: left;
+  }
+  /*topics*/
+  #topics .topicPic img {
+    float: right;
+    width: 50%;
+    margin: 0 0 1em 1em;
+  }
+}
+@media only screen and (min-width: 41.875em) {  /*670px*/
+  /*オススメツアー*/
+  #recommendTour section {
+    position: relative;
+    float: left;
+    width: 31.6239%;
+    /*370px(4column)/1170px*/
+    margin-right: 2.5641%;
+    /*30px/1170px*/
+  }
+  #recommendTour section:last-child {
+    margin-right: 0;
+  }
+  /*old IE*/
+  .ie8 #recommendTour section{
+    margin: 0 0.8547%;
+    /*10px/1170px*/
+  }
+  .ie7 #recommendTour section{
+    margin: 0 0.7800%;
+    width: 31.5542%;
+  }
+ #recommendTour section h3{
+   margin-top: 40%;
+   padding-top: 10px;
+ }
+  #recommendTour .pic {
+    position: absolute;
+    top: 0;
+    overflow:visible;
+    float: none;
+    width: 100%;
+  }
+  #recommendTour .pic img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  #recommendTour p {
+    margin-left: 0;
+  }
+  /*topics*/
+  #topics article h3,
+  #topics article:target h3{
+    border: none;
+    background: transparent;
+  }
+  .ie8 #topics article h3{
+    border: none;
+    background: transparent;
+  }
+  #topics article h3 a,
+  #topics article:target h3 a{
+    padding: 0;
+    background: none;
+    color: #333;
+    cursor: default;
+  }
+  .ie8 #topics article h3 a{
+    padding: 0;
+    background: none;
+  }
+  #topics article .inner{
+    display: block;
+  }
+  .topicVideo .inner .video {
+    float: right;
+    width: 48.7179%;
+    /*570px(6column)/1170px*/
+  }
+  .topicVideo .inner p {
+    float: left;
+    width: 48.7179%;
+    /*570px(6column)/1170px*/
+  }
+  #topics .topicPic img {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {  /*900px*/
+  /*オススメツアー*/
+  #recommendTour section {
+    width: 31.0344%;
+    /*270px/870px*/
+    margin-right: 3.4482%;
+    /*30px/870px*/
+  }
+  /*old IE*/
+  .ie8 #recommendTour section{
+    margin: 0 1.1494;
+    /*10px/870px*/
+  }
+  .ie7 #recommendTour section{
+    width: 30.9788%;
+   margin: 0 1.0938;
+  }
+  /*topics*/
+  .topicVideo .inner .video {
+    float: right;
+    width: 54.0229%;
+    /*470px/870px*/
+  }
+  .topicVideo .inner p {
+    float: left;
+    width: 42.5287%;
+    /*370px/870px*/
+  }
+}

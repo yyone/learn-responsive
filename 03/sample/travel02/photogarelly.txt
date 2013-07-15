@@ -1,0 +1,12 @@
+<h3><span>Photo Garelly</span></h3>
+<ul>
+	<li><a href="#"><img src="img/pic_tn01.jpg" alt="オペラハウス" /></a></li>
+	<li><a href="#"><img src="img/pic_tn02.jpg" alt="灯台" /></a></li>
+	<li><a href="#"><img src="img/pic_tn03.jpg" alt="12人の使徒" /></a></li>
+	<li><a href="#"><img src="img/pic_tn04.jpg" alt="アンコールワット" /></a></li>
+	<li><a href="#"><img src="img/pic_tn05.jpg" alt="バイヨン" /></a></li>
+	<li><a href="#"><img src="img/pic_tn06.jpg" alt="スルタンアフメット・ジャーミィ" /></a></li>
+	<li><a href="#"><img src="img/pic_tn07.jpg" alt="アヤソフィア" /></a></li>
+	<li><a href="#"><img src="img/pic_tn08.jpg" alt="鎌倉" /></a></li>
+	<li><a href="#"><img src="img/pic_tn09.jpg" alt="鎌倉" /></a></li>
+</ul>

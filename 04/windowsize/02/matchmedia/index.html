@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>matchMedia.js DEMO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+<style>
+body{
+	font-family: sans-serif;
+	text-align: center;;
+}
+h1 {
+	margin: 0;
+	padding: 30px 0;
+	font-size: 3em;
+	font-weight: normal;
+	font-family: 'Marcellus SC', serif;
+	text-align: center;
+}
+img {
+	max-width: 100%;
+}
+</style>
+</head>
+<body>
+<h1>matchMedia.js</h1>
+<img src="img/pic_cat_small.jpg" alt="cat" class="demo">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/matchMedia.js"></script>
+<script>
+	//画像差し替え
+	$(window).bind('load resize', function(){
+		//matchMedia.js
+		if(window.matchMedia("(min-width:768px)").matches){
+			$("img.demo").attr("src",$("img.demo").attr("src").replace(/^(.+)_small(\.[a-z]+)$/, "$1_large$2"));
+		}
+	});
+</script>
+</body>
+</html>

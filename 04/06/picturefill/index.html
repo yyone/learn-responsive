@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Picturefill DEMO</title>
+<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+<style>
+body{
+	font-family: sans-serif;
+	text-align: center;
+}
+h1 {
+	margin: 0;
+	padding: 30px 0;
+	font-size: 3em;
+	font-weight: normal;
+	font-family: 'Marcellus SC', serif;
+	text-align: center;
+}
+img {
+	max-width: 100%;
+}
+</style>
+<script src="js/matchmedia.js"></script>
+<script src="js/picturefill.js"></script>
+</head>
+<body>
+<h1>Picturefill</h1>
+<picture alt="cat">
+ <!--  <source src="img/pic_small.jpg"> -->
+ <source src="img/pic_small.jpg">
+ <!-- <source src="img/pic_large.jpg" media="(min-width: 768px)"> -->
+ <source src="img/pic_large.jpg" media="(min-width: 768px)">
+ <noscript><img src="img/pic_small.jpg" alt="cat"></noscript>
+</picture>
+</body>
+</html>

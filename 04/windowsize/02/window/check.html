@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Check Size</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{
+}
+
+</style>
+</head>
+<body>
+<h1>Check Size</h1>
+<div id="content">
+	<p id="screenWidth">screen.width = <strong></strong>px</p>
+	<p id="screenHeight">screen.height = <strong></strong>px</p>
+	<p id="windowInnerWidth">window.innerWidth = <strong></strong>px</p>
+	<p id="windowInnerHeight">window.innerHeight = <strong></strong>px</p>
+	<p id="windowOuterWidth">window.outerWidth = <strong></strong>px</p>
+	<p id="windowOuterHeight">window.outerHeight = <strong></strong>px</p>
+	<p id="jqInnderWidth">$(window).innerWidth() = <strong></strong>px</p>
+	<p id="jqInnderHeight">$(window).innerHeight() = <strong></strong>px</p>
+	<p id="ieClientWidth">document.body.clientWidth = <strong></strong>px</p>
+	<p id="ieClientHeight">document.body.clientHeight = <strong></strong>px</p>
+	<p id="pixelRation">window.devicePixelRatio = <strong></strong></p>
+
+</div>
+<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+<script>
+$(function(){
+	$('#screenWidth strong').html(screen.width);
+	$('#screenHeight strong').html(screen.height);
+	$('#windowOuterWidth strong').html(window.outerWidth)
+	$('#windowOuterHeight strong').html(window.outerHeight);
+	$('#windowInnerWidth strong').html(window.innerWidth)
+	$('#windowInnerHeight strong').html(window.innerHeight);
+	$('#jqInnderWidth strong').html($(window).innerWidth());
+	$('#jqInnderHeight strong').html($(window).innerHeight());
+	$('#ieClientWidth strong').html(document.body.clientWidth);
+	$('#ieClientHeight strong').html(document.body.clientHeight);
+	$('#pixelRation strong').html(window.devicePixelRatio);
+ });
+</script>
+</html>

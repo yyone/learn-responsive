@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/*---------------------------------
+Travel Spice access styleSheet
+----------------------------------*/
+#accessMap{
+  max-width: 100%;
+  margin: 0 10px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#accessMap iframe{
+  width: 100%;
+  height: 300px;
+}
+.mapLink{
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+/*media Queries
+----------------------------------------------------*/
+@media only screen and (min-width:41.875em) {	/*670px*/
+  #accessMap iframe{
+    height: 500px;
+  }
+}

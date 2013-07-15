@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/*初期設定
+-----------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #333;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+/*layout
+----------------------------------------------------*/
+header h1 {
+  margin: 1em 0;
+  font-size: 3em;
+  font-weight: normal;
+  font-family: 'Marcellus SC', serif;
+  text-align: center;
+}
+nav {
+  text-align: center;
+}
+nav ul {
+  display: none;
+}
+
+/*media Queries
+----------------------------------------------------*/
+@media screen and (min-width: 480px) {
+  nav ul {
+    display: inline-block;
+  }
+  nav ul {
+    list-style: none;
+  }
+  nav li {
+    margin: 0 2px;
+    display: inline-block;
+  }
+  nav a {
+    display: inline-block;
+    background: #003980;
+    color: #fff;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+  }
+  nav a:hover {
+    background: #008071;
+  }
+  nav select {
+    display: none;
+  }
+}

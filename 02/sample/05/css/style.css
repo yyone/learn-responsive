@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/*初期設定
+----------------------------------------------------*/
+body {
+  min-width: 320px;
+  background: url(../img/bg_body.png);
+  line-height: 1.5;
+  color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.ie8 img{
+  width: auto;
+}
+/*clearfix*/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*layout
+----------------------------------------------------*/
+#wrapper {
+    max-width: 1240px;
+  }
+header {
+  padding: 15px 0 0;
+  background: #183400;
+}
+header h1 {
+  width: 148px;
+  height: 148px;
+  margin: 0 auto 15px;
+  border: 1px solid #fff;
+  background: #b39b14;
+  background: -webkit-linear-gradient(top, #b39b14, #917700);
+  background: -moz-linear-gradient(top, #b39b14, #917700);
+  background: -o-linear-gradient(top, #b39b14, #917700);
+  background: linear-gradient(to bottom, #b39b14, #917700);
+  box-shadow: 0 0 5px 1 #000;
+  line-height: 148px;
+  font-size: 48px;
+  font-weight: normal;
+  font-family: 'Marcellus SC', serif;
+  color: #000;
+  text-align: center;
+}
+nav {
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 0 6px 2px #000;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #000;
+}
+nav ul li {
+  display: block;
+  float: left;
+  width: 50%;
+  border-top: 1px solid #2e4d13;
+  font-family: 'Marcellus SC', serif;
+  text-align: center;
+}
+.ie7 nav ul li{
+  width: 49.84375%;
+}
+nav ul li a {
+  display: block;
+  padding: 15px 0;
+  color: #fff;
+  text-decoration: none;
+}
+article {
+  padding: 0 0 2em;
+}
+article h1 {
+  margin: 0;
+  padding: 60px 0;
+  background: url(../img/bg_ttl.jpg) center center no-repeat;
+  line-height: 1;
+  font-size: 2em;
+  font-family: 'Marcellus SC', serif;
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+}
+article h2 {
+  padding: 0 0 0 10px;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1.1;
+  border-left: 3px solid #000;
+}
+section {
+  margin: 0 10px 2em;
+}
+footer {
+  margin: 0 10px;
+  padding: 30px 0;
+  border-top: 1px solid #444;
+  text-align: center;
+}
+
+/*media Queries
+----------------------------------------------------*/
+@media only screen and (min-width: 600px) {
+  header {
+    position: relative;
+    height: 120px;
+    padding: 0;
+  }
+  header h1 {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    z-index: 200;
+    margin-left: -75px;
+  }
+  nav ul {
+    overflow: hidden;
+    width: 50%;
+    border-top: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .ie7 nav ul{
+    width: 37.5%;
+  }
+  nav ul.left {
+    float: left;
+    padding-right: 75px;
+  }
+  nav ul.right {
+    float: right;
+    padding-left: 75px;
+  }
+  nav ul li {
+    border-top: none;
+  }
+  nav ul li a {
+    padding: 0;
+    line-height: 120px;
+    text-align: center;
+  }
+  article h1 {
+    padding: 89px 0;
+    font-size: 3em;
+  }
+  #section01 img {
+    float: left;
+    width: 48.9361%;
+    /*460px/690px*/
+    margin: 0 20px 20px 0;
+  }
+  #section02 img {
+    float: right;
+    width: 48.9361%;
+    /*460px/690px*/
+    margin: 0 0 20px 20px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  #wrapper {
+    margin: 0 20px;
+  }
+  header {
+    float: left;
+    width: 25.5319%;
+    /*220px(3column)+20px/940px*/
+    height: auto;
+    padding-bottom: 200px;
+    border-bottom: none;
+    background: #183400 url(../img/bg_header.png) left bottom repeat-x;
+    box-shadow: 0 0 3px 0 #000;
+  }
+  header h1 {
+    margin: 15px auto;
+    position: static;
+  }
+  article {
+    float: right;
+    width: 74.4680%;
+    /*700px(9column)/940px*/
+  }
+  section {
+    margin: 0 0 2em;
+    padding: 0 0 0 20px;
+  }
+  nav {
+    box-shadow: none;
+    border-bottom: 1px solid #2e4d13;
+  }
+  nav ul, .ie7 nav ul {
+    width: 100%;
+  }
+  nav ul.left,
+  nav ul.right {
+    float: none;
+    padding: 0;
+  }
+  nav ul li, .ie7 nav ul li {
+    width: 100%;
+    border-top: 1px solid #000;
+  }
+  nav ul li a {
+    padding: 15px 0 15px 15px;
+    line-height: 1;
+    text-align: left;
+    border-top: 1px solid #2e4d13;
+  }
+  nav ul.right li:last-child a {
+    border-bottom: 1px solid #000;
+  }
+}
+@media only screen and (min-width: 1280px) {
+#wrapper {
+    margin: 0 auto;
+  }
+}

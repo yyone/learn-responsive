@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Responsive Table DEMO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+<style>
+body{
+	font-family: sans-serif;
+}
+h1 {
+  margin: 0;
+  padding: 30px 0;
+  font-size: 3em;
+  font-weight: normal;
+  font-family: 'Marcellus SC', serif;
+  text-align: center;
+}
+#table #ex{
+	display: none;
+}
+dl{
+	margin-bottom: 1em;
+}
+dl dt{
+	font-weight: bold;
+}
+dl dd{
+	margin: 0;
+}
+dl dd:nth-child(2):before{
+	content: "[品詞]";
+}
+dl dd:nth-child(3):before{
+	content: "[意味]";
+}
+dl dd:nth-child(4):before{
+	content: "[用例]";
+}
+@media only screen and (min-width:768px){
+	#table{
+		display: table;
+		margin: 0 auto;
+		border-right: 1px solid #b6dad3;
+		border-bottom: 1px solid #b6dad3;
+	}
+	#table #ex{
+		display: table-header-group;
+	}
+	ol{
+		display: table-row;
+		margin: 0;
+	}
+	ol li{
+		display: table-cell;
+		padding: 5px;
+		border-left: 1px solid #b6dad3;
+		border-top: 1px solid #b6dad3;
+		background: #3ba490;
+		color: #fff;
+		text-align: center;
+	}
+	#table #words{
+		display: table-row-group;
+	}
+	dl{
+		display: table-row;
+		margin: 0;
+	}
+	dl dt,
+	dl dd{
+		display: table-cell;
+		padding: 5px;
+		border-left: 1px solid #b6dad3;
+		border-top: 1px solid #b6dad3;
+	}
+	dl dd:nth-child(2):before,
+	dl dd:nth-child(3):before,
+	dl dd:nth-child(4):before{
+		content: "";
+	}
+}
+</style>
+</head>
+<body>
+<h1>Table DEMO</h1>
+<div id="table">
+	<div id="ex">
+		<ol>
+			<li>単語</li>
+			<li>品詞</li>
+			<li>意味</li>
+			<li>用例</li>
+		</ol>
+	</div>
+	<div id="words">
+		<dl>
+			<dt><dtf>responsive</dtf></dt>
+			<dd>形容詞</dd>
+			<dd>すぐ応答[反応]する，敏感な</dd>
+			<dd>We must be responsive to the needs of society.</dd>
+		</dl>
+		<dl>
+			<dt><dtf>adaptive</dtf></dt>
+			<dd>形容詞</dd>
+			<dd>適応性の(ある)</dd>
+			<dd>social facilitation is an adaptive condition</dd>
+		</dl>
+		<dl>
+			<dt><dtf>elastic</dtf></dt>
+			<dd>形容詞</dd>
+			<dd>弾力のある，伸縮自在の</dd>
+			<dd>Rubber is very elastic.</dd>
+		</dl>
+		<dl>
+			<dt><dtf>liquid</dtf></dt>
+			<dd>形容詞</dd>
+			<dd>液体の，液状の; 流動体の.</dd>
+			<dd>to dilute a liquid with another liquid</dd>
+		</dl>
+		<dl>
+			<dt><dtf>fixed</dtf></dt>
+			<dd>形容詞</dd>
+			<dd>固定した，据え付けの.</dd>
+			<dd>a fixed idea</dd>
+		</dl>
+	</div>
+</div>
+</body>
+</html>

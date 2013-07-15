@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6" lang="ja"> <![endif]-->
+<!--[if IE 7]> <html class="ie7" lang="ja"> <![endif]-->
+<!--[if IE 8]> <html class="ie8" lang="ja"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluid Layout</title>
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet'>
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<h1>Responsive Web Design</h1>
+		<nav>
+			<ul class="clearfix">
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">SAMPLE</a></li>
+				<li class="last"><a href="#">TIPS</a></li>
+			</ul>
+		</nav>
+		<div id="mainImage">
+			<img src="img/pic_main.jpg" alt="">
+		</div>
+	</header>
+	<div id="content" class="clearfix">
+		<article>
+			<section>
+				<h2>ウェブは柔軟な媒体である</h2>
+				<img src="img/pic_01.jpg" alt="">
+				<p>テキスト文書だったWebをデザインするようになって間もない頃は、デスクトップパブリッシングの技術を参考にしてきました。<br>
+				そして制約されたサイズの中でデザインする印刷物のデザインがWebデザインの主流となりました。<br>
+				しかしそもそもWebと印刷物は異なる媒体です。<br>
+				長い時間を経て、印刷物のデザインは制約されたサイズでのデザイン技術を高めましが、そのままWebに反映できる技術ではありませんでした。<br>
+				Webは制約された媒体ではありません。環境によって縦横に変化する柔軟な媒体です。<br>
+				今までのWebデザインで固まった固定概念と、ピクセルパーフェクトの制約を壊してもっと柔軟になるべき時です。</p>
+			</section><!--/section01 -->
+			<section>
+				<h2>全てをコントロールできない</h2>
+				<p>Webサイトにアクセスできるデバイスは多様化し、それを使う環境・シチュエーションも多様化しました。<br>
+				入力方式もマウスからタッチデバイス、カメラを使って手さえ触れずに操作することも可能となりました。<br>
+				Webサイトを閲覧するブラウザはユーザーがカスタマイズして使うことができます。万人に全く同じような体験を提供することは実質的に不可能です。全てを制御しようとしないことです。<br>
+				人によって多少の見え方の違いや使い方の違いも許容できるような柔軟な思考が必要です。</p>
+			</section><!--/section02-->
+			<section>
+				<h2>情報を適切に届けること</h2>
+				<p>柔軟な媒体であり、こちらから全てをコントロールすることもできない。<br>
+				では、環境により提供するコンテンツも異なって良いのでしょうか？<br>
+				ユーザーがサイトにアクセスする理由はそのサイトのコンテンツを閲覧することが目的です。<br>
+				もしそのコンテンツを適切にユーザーに届けられないのであればそのサイトの価値はなくなってしまいます。<br>
+				閲覧するデバイスや環境で多少その構造が変わったとしてもサイトの核であるコンテンツは適切にユーザーに届けなければなりません。<br>
+				コンテンツファースト。コンテンツから考え、コンテンツを最優先に設計しましょう。<br>
+				そしてどの情報をどの形でどのように届けるのが最適であるのか。難しい問題ですが常にチャレンジし続けることで解が見えてくるでしょう。</p>
+			</section><!--/section03-->
+		</article>
+		<aside>
+			<section>
+				<h3>Headline</h3>
+				<img src="img/pic_02.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+			</section>
+			<section>
+				<h3>Headline</h3>
+				<img src="img/pic_03.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+			</section>
+		</aside>
+	</div><!--/#content -->
+	<footer>
+		<small>Copyright (c) Responisive web design</small>
+	</footer>
+</div><!--/#wrapper-->
+</body>
+</html>

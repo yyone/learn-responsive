@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*---------------------------------
+Travel Spice Contact styleSheet
+----------------------------------*/
+form{
+  margin-bottom: 2em;
+}
+form dt{
+  font-weight: bold;
+}
+form dd{
+  margin: 0 0 1em 0;
+}
+form input:not([type="radio"]),
+textarea{
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  -webkit-appearance: none;
+}
+form input[type="submit"]{
+  max-width: 200px;
+  border-radius: 5px;
+  background: #18445c;
+  background: -webkit-linear-gradient(top, #18445c, #113041);
+  background: -moz-linear-gradient(top, #18445c, #113041);
+  background: -o-linear-gradient(top, #18445c, #113041);
+  background: linear-gradient(to bottom, #18445c, #113041);
+  color: #fff;
+}
+form label{
+  padding-right: 10px;
+}
+form span{
+  display: none;
+  color: #c09853;
+}
+input:invalid + span {
+  display: block;
+}
+form .submit{
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+/*media Queries
+----------------------------------------------------*/
+@media only screen and (min-width:41.875em) {	/*670px*/
+  form dt{
+    clear: left;
+    float: left;
+    width: 10em;
+  }
+  form dd{
+    margin-left: 10em;
+  }
+  form input:not([type="radio"]),
+  textarea{
+    width: 25em;
+    padding: 5px;
+  }
+  form .submit{
+    margin-left: 10em;
+    text-align: left;
+  }
+}

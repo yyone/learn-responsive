@@ -1,0 +1,395 @@
+@charset "UTF-8";
+/*---------------------------------
+Travel Spice ProtType style sheet
+----------------------------------*/
+/*base
+----------------------------------*/
+html {
+  min-width: 320px;
+  font-size: 62.5%;/*10px*/
+}
+body {
+  margin: 0;
+  line-height: 1.5;
+  color: #333;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family:"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","ＭＳ Ｐゴシック",sans-serif;
+}
+/*Headline*/
+h1 {
+  margin: 0.67em 0;
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+h2 {
+  margin: 0.83em 0;
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+h3 {
+  margin: 1em 0;
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+h4 {
+  margin: 1.33em 0;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+h5 {
+  margin: 1.67em 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+h6 {
+  margin: 1.67em 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+img,video {
+  max-width: 100%;
+  height: auto;
+}
+.ie8 img{
+	width: 100%;
+}
+/*clearfix*/
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+/*button*/
+.btn {
+  display: inline-block;
+  padding: 5px 23px;
+  border: 1px #e6e6e6 solid;
+  border-radius: 5px;
+  background: #e5e5e5;
+  background: -webkit-linear-gradient(top, #ffffff, #e5e5e5);
+  background: -moz-linear-gradient(top, #ffffff, #e5e5e5);
+  background: -o-linear-gradient(top, #ffffff, #e5e5e5);
+  background: linear-gradient(to bottom, #ffffff, #e5e5e5);
+  color: #333;
+  text-decoration: none;
+}
+.btn:hover {
+  border: 1px #ccc solid;
+  background: #d9d9d9;
+  background: -webkit-linear-gradient(top, #e5e5e5, #d9d9d9);
+  background: -moz-linear-gradient(top, #e5e5e5, #d9d9d9);
+  background: -o-linear-gradient(top, #e5e5e5, #d9d9d9);
+  background: linear-gradient(to bottom, #e5e5e5, #d9d9d9);
+}
+.btnBlue {
+  background: #18445c;
+  background: -webkit-linear-gradient(top, #18445c, #113041);
+  background: -moz-linear-gradient(top, #18445c, #113041);
+  background: -o-linear-gradient(top, #18445c, #113041);
+  background: linear-gradient(to bottom, #18445c, #113041);
+  color: #fff;
+}
+.btnBlue:hover {
+  background: #0a1c26;
+  background: -webkit-linear-gradient(top, #113041, #0a1c26);
+  background: -moz-linear-gradient(top, #113041, #0a1c26);
+  background: -o-linear-gradient(top, #113041, #0a1c26);
+  background: linear-gradient(to bottom, #113041, #0a1c26);
+}
+.btnGreen {
+  background: #83a603;
+  background: -webkit-linear-gradient(top, #83a603, #769300);
+  background: -moz-linear-gradient(top, #83a603, #769300);
+  background: -o-linear-gradient(top, #83a603, #769300);
+  background: linear-gradient(to bottom, #83a603, #769300);
+  color: #fff;
+}
+.btnGreen:hover {
+  background: #5c7200;
+  background: -webkit-linear-gradient(top, #769300, #5c7200);
+  background: -moz-linear-gradient(top, #769300, #5c7200);
+  background: -o-linear-gradient(top, #769300, #5c7200);
+  background: linear-gradient(to bottom, #769300, #5c7200);
+}
+
+/*layout
+----------------------------------*/
+#wrapper {
+  position: relative;
+  margin: 0 10px;
+  padding-bottom: 60px;
+}
+
+/*navigation*/
+#navControl a {
+  display: block;
+  overflow: hidden;
+  width: 44px;
+  height: 44px;
+  background: #000;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+ul#globalNav {
+  margin: 0;
+  padding: 0;
+}
+ul#globalNav li a {
+  display: block;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*photo garelly*/
+#photoGarelly {
+  display: none;
+}
+/*social button*/
+#socialBtn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  margin-left: -50%;
+  padding: 0;
+}
+#socialBtn li {
+  display: block;
+  width: 50%;
+  border-radius: 5px;
+}
+#socialBtn li a {
+  display: block;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+}
+#socialBtn li.twitter {
+  float: left;
+}
+#socialBtn li.facebook {
+  float: right;
+}
+
+/*footer*/
+footer {
+  text-align: center;
+}
+
+
+/*media Queries
+----------------------------------------------------*/
+@media only screen and (min-width: 31.25em) {	/*500px*/
+  /*オススメツアー*/
+  #recommendTour .pic {
+    overflow: hidden;
+    float: left;
+    width: 220px;
+  }
+  #recommendTour .pic img {
+    max-width: none;
+    margin-left: -40px;
+  }
+  #recommendTour p {
+    margin-left: 230px;
+  }
+  #recommendTour .more {
+    clear: left;
+  }
+  /*topics*/
+  #topics .topicPic img {
+    float: right;
+    width: 50%;
+    margin: 0 0 1em 1em;
+  }
+}
+@media only screen and (min-width: 41.875em) {	/*670px*/
+  #wrapper {
+    margin: 0 20px;
+  }
+  header #logo{
+	  text-align: center;
+  }
+  /*navigation*/
+  #navControl {
+    display: none;
+  }
+  ul#globalNav {
+    display: block !important;
+  }
+  ul#globalNav li {
+    float: left;
+    width: 18.6324%;
+    /*218px/1170px*/
+    margin-right: 1.7094%;
+    /*20px/1170px*/
+    text-align: center;
+  }
+  ul#globalNav li:last-child {
+    margin-right: 0;
+  }
+
+  /*social button*/
+  #socialBtn {
+    top: 10px;
+    bottom: auto;
+    right: 10px;
+    left: auto;
+    width: 110px;
+    margin: 0;
+  }
+  #socialBtn li {
+    width: 50px;
+  }
+  #socialBtn li a {
+    overflow: hidden;
+    padding: 0;
+    height: 50px;
+    border-radius: 25px;
+    text-indent: 100%;
+    white-space: nowrap;
+  }
+  #socialBtn li.twitter {
+    margin-right: 10px;
+  }
+  #socialBtn li.facebook {
+    float: left;
+  }
+
+  /*オススメツアー*/
+  #recommendTour section {
+    float: left;
+    width: 31.6239%;
+    /*370px(4column)/1170px*/
+    margin-right: 2.5641%;
+    /*30px/1170px*/
+  }
+  #recommendTour section:last-child {
+    margin-right: 0;
+  }
+  #recommendTour .pic {
+    overflow:visible;
+    float: none;
+    width: auto;
+  }
+  #recommendTour .pic img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  #recommendTour p {
+    margin-left: 0;
+  }
+
+  /*topics*/
+  .topicVideo .inner .video {
+    float: right;
+    width: 48.7179%;
+    /*570px(6column)/1170px*/
+  }
+  .topicVideo .inner p {
+    float: left;
+    width: 48.7179%;
+    /*570px(6column)/1170px*/
+  }
+  #topics .topicPic img {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {	/*900px*/
+  #sub {
+    float: left;
+    width: 23.0769%;
+    /*270px(3column)/1170px*/
+  }
+  /*navigation*/
+  ul#globalNav li {
+    float: none;
+    width: 100%;
+    text-align: left;
+  }
+  /*main*/
+  #main {
+    float: right;
+    width: 74.3589%;
+    /*870px(9column)/1170px*/
+    margin: 20px 0 0;
+  }
+  /*オススメツアー*/
+  #recommendTour section {
+    width: 31.0344%;
+    /*270px/870px*/
+    margin-right: 3.4482%;
+    /*30px/870px*/
+  }
+  /*topics*/
+  .topicVideo .inner .video {
+    float: right;
+    width: 54.0229%;
+    /*470px/870px*/
+  }
+  .topicVideo .inner p {
+    float: left;
+    width: 42.5287%;
+    /*370px/870px*/
+  }
+  /*social button*/
+  #socialBtn {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+  #socialBtn li {
+    width: auto;
+  }
+  #socialBtn li a {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    text-indent: 0;
+  }
+  #socialBtn li.twitter {
+    float: none;
+    margin: 10px;
+  }
+  #socialBtn li.facebook {
+    float: none;
+    margin: 10px;
+  }
+  /*photo garelly*/
+  #photoGarelly {
+    display: block;
+  }
+  #photoGarelly ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  #photoGarelly ul li {
+    float: left;
+    width: 29.6296%;
+    /*80px/270px*/
+    margin-right: 5.5555%;
+    margin-bottom: 5.5555%;
+    /*15px/270px*/
+  }
+  #photoGarelly ul li:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 75.625em) { /*1210px*/
+  #wrapper {
+    width: 83.5714em;/*1170px*/
+    margin: 0 auto;
+  }
+}
+
+

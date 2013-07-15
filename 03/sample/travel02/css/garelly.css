@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*---------------------------------
+Travel Spice  Garelly styleSheet
+----------------------------------*/
+#garelly{
+  margin-bottom: 3em;
+}
+#garelly h3{
+  margin-bottom: 0;
+}
+#garelly ul{
+  margin: 0;
+  padding: 0;
+}
+#garelly ul li{
+  display: block;
+  list-style-type: none;
+  float: left;
+  width: 50%;
+  margin: 5px 0;
+  text-align: center;
+}
+.ie7 #garelly ul li{
+  width: 49.84375%;
+}
+#garelly ul li a{
+  display: block;
+  margin: 0 10px;
+}
+#garelly  ul li a img{
+  border: 2px solid #fff;
+  box-shadow: 0 1px 2px 0 #999;
+}
+
+/*media Queries
+----------------------------------------------------*/
+@media only screen and (min-width:38.75em){ /*620px*/
+/*179+20*3+20*/
+  #garelly ul li{
+    width: 33.3333%;
+  }
+  .ie7 #garelly ul li{
+    width: 33.2493%;
+  }
+}
+
+@media only screen and (min-width:51.25em){ /*820px*/
+  #garelly ul li{
+    width: 25%;
+  }
+  .ie7 #garelly ul li{
+    width: 24.9390%;
+  }
+}

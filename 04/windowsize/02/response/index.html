@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Respons.js DEMO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+<style>
+body{
+	font-family: sans-serif;
+	text-align: center;;
+}
+h1 {
+  margin: 0;
+  padding: 30px 0;
+  font-size: 3em;
+  font-weight: normal;
+  font-family: 'Marcellus SC', serif;
+  text-align: center;
+}
+img {
+	max-width: 100%;
+}
+div{
+	font-size: 2em;
+}
+</style>
+</head>
+<body>
+<h1>Respons.js</h1>
+<p data-min-width-768="画面サイズ幅は768px〜1280px未満です" data-min-width-1280="画面サイズ幅は1280px以上です">画面サイズ幅は767px以下です</p>
+<img src="img/pic_cat_small.jpg" alt="cat" data-src768="img/pic_cat_large.jpg">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/response.min.js"></script>
+<script>
+  Response.create([{
+    prop: "width"
+    , breakpoints: [0, 320, 768, 1280]
+  	, lazy: true
+  },{
+  	prop: "width"
+  	, prefix: "src"
+  	, breakpoints: [0, 320, 768]
+  	, lazy: true
+  }]);
+  if(Response.band(481)){
+    //画面サイズ幅が481px以上の時の処理
+  }
+  if(Response.band(0, 480)){
+    //画面サイズ幅が0〜480pxの時の処理
+  }
+  if(Response.device.band(0, 480)){
+    //デバイスの幅が0〜480pxの時の処理
+  }
+</script>
+</body>
+</html>

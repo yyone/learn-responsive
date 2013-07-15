@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Breakpoints.js DEMO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+<style>
+body{
+	font-family: sans-serif;
+	text-align: center;;
+}
+h1 {
+	margin: 0;
+	padding: 30px 0;
+	font-size: 3em;
+	font-weight: normal;
+	font-family: 'Marcellus SC', serif;
+	text-align: center;
+}
+img {
+	max-width: 100%;
+}
+</style>
+</head>
+<body>
+<h1>Breakpoints.js</h1>
+<div id="log"><p></p></div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/breakpoints.js"></script>
+<script>
+$(function() {
+	$(window).setBreakpoints({
+		distinct: true,
+		breakpoints: [
+			320,
+			768,
+			1024
+		]
+	});
+	$(window).bind('exitBreakpoint320',function() {
+		$('#log').append('<p>Exit 320px〜768px</p>');
+	});
+	$(window).bind('enterBreakpoint320',function() {
+		$('#log').append('<p> 320px〜768px</p>');
+	});
+	$(window).bind('exitBreakpoint768',function() {
+		$('#log').append('<p>Exit 768px〜1024px</p>');
+	});
+	$(window).bind('enterBreakpoint768',function() {
+		$('#log').append('<p>768px〜1024px</p>');
+	});
+	$(window).bind('exitBreakpoint1024',function() {
+		$('#log').append('<p>Exit 1024px以上</p>');
+	});
+	$(window).bind('enterBreakpoint1024',function() {
+		$('#log').append('<p> 1024 px以上</p>');
+	});
+});
+</script>
+</body>
+</html>

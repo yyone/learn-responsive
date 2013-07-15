@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Responsive Table DEMO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+<style>
+body{
+	font-family: sans-serif;
+}
+h1 {
+  margin: 0;
+  padding: 30px 0;
+  font-size: 3em;
+  font-weight: normal;
+  font-family: 'Marcellus SC', serif;
+  text-align: center;
+}
+/*clearfix*/
+.clearfix {zoom:1;}
+.clearfix:after{
+    content: ""; 
+    display: block; 
+    clear: both;
+}
+table{
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+th,td{ 
+	margin: 0; 
+	padding: 10px;
+	border: 1px solid #d2d9ad;
+}
+th{
+	background: #8fa61a;
+	color: #fff;
+	font-weight: normal;
+}
+
+@media only screen and (max-width: 767px) { 
+	table{ 
+		display: block; 
+		position: relative; 
+		width: 100%; 
+	}
+	table thead{ 
+		display: block; 
+		float: left; 
+	}
+	table tbody{ 
+		display: block;
+		position: relative; 
+		width: auto; 
+		overflow-x: auto; 
+		white-space: nowrap; 
+	}
+	table thead tr{ 
+		display: block; 
+	}
+	table th{ 
+		display: block; 
+	}
+	table tbody tr{ 
+		display: inline-block; 
+		vertical-align: top; 
+	}
+	table td{ 
+		display: block; 
+	}
+
+	/* borderの調整 */
+	th{ 
+		border-bottom: 0; 
+	}
+	td{ 
+		border-left: 0; 
+		border-right: 0; 
+		border-bottom: 0; 
+	}
+	tbody tr{ 
+		border-right: 1px solid #d2d9ad; 
+	}
+	th:last-child,
+	td:last-child { 
+		border-bottom: 1px solid #d2d9ad; 
+	}
+}
+</style>
+</head>
+<body>
+<h1>Table DEMO</h1>
+<table class="clearfix">
+	<thead class="clearfix">
+		<tr>
+			<th>Employee</th>
+			<th>xHTML</th>
+			<th>HTML5</th>
+			<th>CSS</th>
+			<th>JS</th>
+			<th>jQuery</th>
+			<th>jQueryUI</th>
+			<th>jQuery Mobile</th>
+			<th>Sencha Touch</th>
+			<th>PHP</th>
+			<th>CakePHP</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Marco Pegoraro</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+		</tr><tr>
+			<td>Mario Rossi</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>no</td>
+			<td>yes</td>
+			<td>no</td>
+			<td>no</td>
+			<td>no</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>no</td>
+		</tr><tr>
+			<td>Alberto Bianchi</td>
+			<td>no</td>
+			<td>no</td>
+			<td>yes</td>
+			<td>no</td>
+			<td>no</td>
+			<td>no</td>
+			<td>no</td>
+			<td>no</td>
+			<td>no</td>
+			<td>no</td>
+		</tr><tr>
+			<td>Brad Poul</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>no</td>
+			<td>no</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>no</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

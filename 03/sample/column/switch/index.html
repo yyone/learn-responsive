@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<meta name="viewport" content="width=device-width">
+<head>
+	<meta charset="UTF-8">
+	<title>Switch Viewport</title>
+<link href='http://fonts.googleapis.com/css?family=Maven+Pro:900,400' rel='stylesheet' type='text/css'>
+
+<style>
+#switch:disabled	{display: none;}
+
+#switch	{
+	width: 100%;
+	padding: 10px 0;
+	background: #333;
+	border-radius: 10px;
+	color: #fff;
+	-webkit-appearance: none;
+}
+
+/*デバイス幅が600px以下の場合のみボタン表示*/
+@media screen and (min-device-width:480px){
+	#switch{
+		display: none;
+	}
+}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+$(function(){
+	$("#switch").click(function(){
+		$("head meta[name=viewport]").replaceWith('<meta name="viewport" content="width=980">');
+		$(this).attr("value", "モバイル版に切り替える");
+		$(this).toggleClass("pc");
+		if($(this).attr("class") == "pc"){
+			$("head meta[name=viewport]").replaceWith('<meta name="viewport" content="width=device-width">');
+			$(this).attr("value", "PC版に切り替える");
+		}
+	});
+});
+</script>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+<input id="switch" type="button" class="pc" value="PC版に切り替える">
+
+</html>

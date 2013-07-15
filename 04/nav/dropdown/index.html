@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navigation Demo</title>
+<link rel="stylesheet" href="css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+	<h1>navi demo</h1>
+</header>
+<nav>
+	<ul>
+		<li><a href="#" class="active">Home</a></li>
+		<li><a href="#">Books</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">About Us</a></li>
+		<li><a href="#">Support</a></li>
+	</ul>
+</nav>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+$(function() {
+	$("<select />").appendTo("nav");
+
+	// 一番頭のoptionタグを作成
+	$("<option />", {
+		"selected": "selected",
+		"value"   : "",
+		"text"    : "MENU"
+	}).appendTo("nav select");
+
+	// リストの情報からoptionタグを作成
+	$("nav a").each(function() {
+	var el = $(this);
+	$("<option />", {
+			"value" : el.attr("href"),
+			"text"  : el.text()
+	}).appendTo("nav select");
+	});
+
+	// ドロップダウンのアクション
+	$("nav select").change(function() {
+		window.location = $(this).find("option:selected").val();
+	});
+});
+</script>
+</body>
+</html>
